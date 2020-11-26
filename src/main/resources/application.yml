@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: cards
+  profiles:
+    active: production
+
+  datasource:
+    url: ${accounts.datasource.url}
+    username: ${accounts.datasource.username}
+    password: ${accounts.datasource.password}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: ${cards.datasource.ddl-mode}
+
+# ACTUATOR INFO
+info:
+  app:
+    name: "cards"
+    version: "0.0.1"
+    profile: ${spring.profiles.active}
+  serverInfo:
+    port: ${server.port}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+application:
+  allow-get-cards: ${cards.allow-get-cards}
+
+
+eureka:
+  client: ${eureka-client}
+
+server:
+  port: 9995
