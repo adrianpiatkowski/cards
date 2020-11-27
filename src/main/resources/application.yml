@@ -5,9 +5,9 @@ spring:
     active: production
 
   datasource:
-    url: ${accounts.datasource.url}
-    username: ${accounts.datasource.username}
-    password: ${accounts.datasource.password}
+    url: ${cards.datasource.url}
+    username: ${cards.datasource.username}
+    password: ${cards.datasource.password}
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:

@@ -18,6 +18,7 @@ import javax.persistence.Table;
 @AllArgsConstructor
 @Builder
 public class Card {
+
     @Id
     @GeneratedValue
     private Long id;
